@@ -1,18 +1,18 @@
 import type { Config } from "tailwindcss";
+import twAnimate from "tailwindcss-animate";
 
 export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  darkMode: ["class"],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
+        // neutral 900
+        black: "hsl(0, 0%, 9%)",
+        // neutral 100
+        white: "hsl(0, 0%, 96.1%)"
+      }
+    }
   },
-  plugins: [],
+  plugins: [twAnimate]
 } satisfies Config;
